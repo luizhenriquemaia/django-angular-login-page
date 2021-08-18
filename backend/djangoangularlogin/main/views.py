@@ -9,7 +9,9 @@ class LoginViewSet(generics.GenericAPIView):
 
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
+        #serializer.is_valid(raise_exception=True)
+        if not serializer.is_valid():
+            return Response({"message": "Dados incorretos"}, status=status.HTTP_400_BAD_REQUEST)
         user = serializer.validated_data
         return Response({"user": UserSerializer(user,
             context=self.get_serializer_context()).data, "message": "Login efetuado"},

@@ -5,5 +5,5 @@ from .views import LoginViewSet
 
 
 urlpatterns = [
-    path('api/auth/login', LoginViewSet.as_view()),
+    path('api/auth/login/', LoginViewSet.as_view()),
 ]
