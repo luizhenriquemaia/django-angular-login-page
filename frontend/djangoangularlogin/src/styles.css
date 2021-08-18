@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+  --primary: #942273;
+  --secondary: #32b81a;
+  --background: #E7E7E7;
+  --background-dark: #C9C3C5;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    background-color: var(--background);
+    font-family: 'Poppins', sans-serif;
+} 
+
+.container {
+    margin: 100px auto;
+}
+
+
+.container h1 {
+    margin-bottom: 2em;
+    color: var(--primary);
+
+}
+
+.container, .signInForm, .signInForm .form-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+.signInForm * {
+    margin: 10px;
+}
+
+.signInForm input {
+  padding: 1em 1em;
+  border-radius: 10px;
+  border: none;
+}
+
+.signInForm button {
+cursor: pointer;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 3px;
+  color: white;
+  background-color: var(--secondary);
+  border: 0;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}

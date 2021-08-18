@@ -5,14 +5,12 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
-import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    PagenotfoundComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
